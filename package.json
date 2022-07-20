@@ -8,6 +8,8 @@
     "lint:fix": "npm run lint -- --fix",
     "test": "jest --passWithNoTests",
     "test:staged": "npm test -- --findRelatedTests",
+    "test:watch": "npm test -- --watch",
+    "test:coverage": "npm test -- --coverage",
     "prepare": "husky install"
   },
   "author": "",
