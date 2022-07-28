@@ -83,7 +83,7 @@ describe('DbAddAccount Usecase', () => {
     })
   })
 
-  it('should throw if Encrypter throws', async () => {
+  it('should throw if AddAccountRepository throws', async () => {
     const { sut, addAccountRepositoryStub } = makeSut()
     jest.spyOn(addAccountRepositoryStub, 'add').mockReturnValueOnce(new Promise((resolve, reject) => reject(new Error())))
     const accountData = makeFakeAccountData()
