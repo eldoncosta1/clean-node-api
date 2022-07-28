@@ -1,10 +1,15 @@
+import { scoped, inject, Lifecycle } from 'tsyringe'
 import { IKnowledgeAreaRepository } from './db-knowledge-area-protocols'
 
+@scoped(Lifecycle.ContainerScoped)
 export class ListKnowledgeArea implements ListKnowledgeArea {
-  private readonly knowledgeAreaRepository: IKnowledgeAreaRepository
+  // private readonly knowledgeAreaRepository: IKnowledgeAreaRepository
 
-  constructor (knowledgeAreaRepository: IKnowledgeAreaRepository) {
-    this.knowledgeAreaRepository = knowledgeAreaRepository
+  constructor (
+    @inject(IKnowledgeAreaRepository)
+    private readonly knowledgeAreaRepository: IKnowledgeAreaRepository
+  ) {
+    // this.knowledgeAreaRepository = knowledgeAreaRepository
   }
 
   async handle (): Promise<any[]> {

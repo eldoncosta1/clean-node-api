@@ -6,5 +6,6 @@
     "esModuleInterop": true,
     "allowJs": true,
     "strictNullChecks": true,
+    "experimentalDecorators": true,
   }
 }

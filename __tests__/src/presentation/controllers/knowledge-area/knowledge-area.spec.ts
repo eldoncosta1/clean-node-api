@@ -4,23 +4,6 @@ import { HttpRequest, HttpResponse } from '../../../../../src/presentation/proto
 import { ListKnowledgeArea, ListKnowledgeAreaModel } from '../../../../../src/presentation/controllers/knowledge-area/knowledge-area-protocols'
 import { ok, serverError } from '../../../../../src/presentation/helpers/http-helper'
 
-// class ListKnowledeAreaController {
-//   private readonly listKnowledgeAreaStub: ListKnowledgeArea
-
-//   constructor (listKnowledgeAreaStub: ListKnowledgeArea) {
-//     this.listKnowledgeAreaStub = listKnowledgeAreaStub
-//   }
-
-//   async handle (httpRequest: HttpRequest): Promise<HttpResponse> {
-//     try {
-//       const listKnowledgeArea = await this.listKnowledgeAreaStub.handle()
-//       return ok(listKnowledgeArea)
-//     } catch (error) {
-//       return serverError(error)
-//     }
-//   }
-// }
-
 const makeListKnowledgeArea = (): ListKnowledgeArea => {
   class ListKnowledgeAreaStub {
     async handle (): Promise<ListKnowledgeAreaModel[]> {
