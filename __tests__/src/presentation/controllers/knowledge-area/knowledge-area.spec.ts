@@ -55,7 +55,7 @@ describe('KnowledgeArea Controller', () => {
     const { sut, listKnowledgeAreaStub } = makeSut()
 
     jest.spyOn(listKnowledgeAreaStub, 'handle').mockImplementationOnce(async () => {
-      return await new Promise((resolve, reject) => reject(new Error()))
+      return new Promise((resolve, reject) => reject(new Error()))
     })
 
     const httpResponse = await sut.handle(makeFakeRequest())
