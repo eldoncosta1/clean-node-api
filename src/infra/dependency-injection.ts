@@ -5,7 +5,7 @@ import {
   Lifecycle
 } from 'tsyringe'
 
-import { IKnowledgeAreaRepository } from '../data/protocols/knowledge-area-repository'
+import { IKnowledgeAreaRepository } from '../data/protocols/db/knowledge-area-repository'
 import { KnowledgeAreaMongoRepository } from './db/mongodb/knowledge-area-repository/knowledge-area'
 
 export function registerInfrastrucutureServices (container: DependencyContainer): void {

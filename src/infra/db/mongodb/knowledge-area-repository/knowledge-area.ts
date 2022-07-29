@@ -1,4 +1,4 @@
-import { IKnowledgeAreaRepository } from '../../../../data/protocols/knowledge-area-repository'
+import { IKnowledgeAreaRepository } from '../../../../data/protocols/db/knowledge-area-repository'
 import { KnowledgeAreaModel } from '../../../../domain/models/knowledge-area'
 import { MongoHelper } from '../helpers/mongo-helper'
 

@@ -1,6 +1,6 @@
 import { MongoHelper } from '../helpers/mongo-helper'
 import { KnowledgeAreaMongoRepository } from './knowledge-area'
-import { IKnowledgeAreaRepository } from '../../../../data/protocols/knowledge-area-repository'
+import { IKnowledgeAreaRepository } from '../../../../data/protocols/db/knowledge-area-repository'
 
 const makeSut = (): IKnowledgeAreaRepository => {
   return new KnowledgeAreaMongoRepository()
