@@ -2,7 +2,7 @@ import { scoped, inject, Lifecycle } from 'tsyringe'
 import { IKnowledgeAreaRepository } from './db-knowledge-area-protocols'
 
 @scoped(Lifecycle.ContainerScoped)
-export class ListKnowledgeArea implements ListKnowledgeArea {
+export class ListKnowledgeArea {
   // private readonly knowledgeAreaRepository: IKnowledgeAreaRepository
 
   constructor (
