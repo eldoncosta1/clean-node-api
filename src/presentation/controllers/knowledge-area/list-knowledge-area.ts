@@ -1,5 +1,5 @@
 import { Controller, HttpRequest, HttpResponse, ListKnowledgeArea } from './knowledge-area-protocols'
-import { ok, serverError } from '../../helpers/http-helper'
+import { ok, serverError } from '../../helpers/http/http-helper'
 
 export class ListKnowledgeAreaController implements Controller {
   private readonly listKnowledgeArea: ListKnowledgeArea

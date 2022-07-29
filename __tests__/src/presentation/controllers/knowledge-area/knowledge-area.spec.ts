@@ -2,7 +2,7 @@ import { ListKnowledgeAreaController } from '../../../../../src/presentation/con
 import { ServerError } from '../../../../../src/presentation/errors/server-error'
 import { HttpRequest, HttpResponse } from '../../../../../src/presentation/protocols'
 import { ListKnowledgeArea, ListKnowledgeAreaModel } from '../../../../../src/presentation/controllers/knowledge-area/knowledge-area-protocols'
-import { ok, serverError } from '../../../../../src/presentation/helpers/http-helper'
+import { ok, serverError } from '../../../../../src/presentation/helpers/http/http-helper'
 
 const mockDate = new Date()
 
