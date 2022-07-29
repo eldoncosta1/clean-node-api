@@ -4,8 +4,10 @@ import { HttpRequest, HttpResponse } from '../../../../../src/presentation/proto
 import { ListKnowledgeArea, ListKnowledgeAreaModel } from '../../../../../src/presentation/controllers/knowledge-area/knowledge-area-protocols'
 import { ok, serverError } from '../../../../../src/presentation/helpers/http-helper'
 
+const mockDate = new Date()
+
 const makeListKnowledgeArea = (): ListKnowledgeArea => {
-  class ListKnowledgeAreaStub {
+  class ListKnowledgeAreaStub implements ListKnowledgeArea {
     async handle (): Promise<ListKnowledgeAreaModel[]> {
       return new Promise(resolve => resolve(makeFakeListKnowledgeArea()))
     }
@@ -16,7 +18,7 @@ const makeListKnowledgeArea = (): ListKnowledgeArea => {
 
 const makeFakeListKnowledgeArea = (): ListKnowledgeAreaModel[] => {
   return [
-    { id: '1', code: 'any_code', title: 'any_title', createdAt: new Date(), deletedAt: new Date(), updatedAt: new Date() }
+    { id: '1', code: 'any_code', title: 'any_title', createdAt: mockDate, deletedAt: mockDate, updatedAt: mockDate }
   ]
 }
 
