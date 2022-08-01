@@ -2,11 +2,8 @@ import { Controller, HttpRequest, HttpResponse, ListKnowledgeArea } from './know
 import { ok, serverError } from '../../helpers/http/http-helper'
 
 export class ListKnowledgeAreaController implements Controller {
-  private readonly listKnowledgeArea: ListKnowledgeArea
-
-  constructor (listKnowledgeArea: ListKnowledgeArea) {
-    this.listKnowledgeArea = listKnowledgeArea
-  }
+  constructor (
+    private readonly listKnowledgeArea: ListKnowledgeArea) {}
 
   async handle (httpRequest: HttpRequest): Promise<HttpResponse> {
     try {
