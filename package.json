@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node dist/main/server.js",
     "build": "rimraf dist && tsc",
+    "debug": "node --inspect=0.0.0.0:9222 --nolazy dist/main/server.js",
     "start:dev": "sucrase-node src/main/server.ts",
     "dev": "tsnd --watch --inspect -r tsconfig-paths/register --transpile-only --ignore-watch node_modules --exit-child --respawn src/main/server.ts",
     "up": "npm run build && docker-compose up -d",
