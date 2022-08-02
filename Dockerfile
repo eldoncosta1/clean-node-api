@@ -1,5 +1,5 @@
 FROM node:12
 
-WORKDIR /usr/src/clean-node-api
+WORKDIR /app
 COPY ./package.json .
 RUN npm install --omit=dev
