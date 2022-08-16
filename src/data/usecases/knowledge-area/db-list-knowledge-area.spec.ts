@@ -1,5 +1,5 @@
 import { IKnowledgeAreaRepository } from './db-knowledge-area-protocols'
-import { ListKnowledgeArea } from './db-list-knowledge-area'
+import { DbListKnowledgeArea } from './db-list-knowledge-area'
 
 class KnowledgeAreaRepositoryStub implements IKnowledgeAreaRepository {
   async list (): Promise<any[]> {
@@ -8,13 +8,13 @@ class KnowledgeAreaRepositoryStub implements IKnowledgeAreaRepository {
 }
 
 interface SutTypes {
-  sut: ListKnowledgeArea
+  sut: DbListKnowledgeArea
   knowledgeAreaRepositoryStub: IKnowledgeAreaRepository
 }
 
 const makeSut = (): SutTypes => {
   const knowledgeAreaRepositoryStub = new KnowledgeAreaRepositoryStub()
-  const sut = new ListKnowledgeArea(knowledgeAreaRepositoryStub)
+  const sut = new DbListKnowledgeArea(knowledgeAreaRepositoryStub)
   return {
     sut,
     knowledgeAreaRepositoryStub
