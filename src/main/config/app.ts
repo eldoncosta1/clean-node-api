@@ -1,7 +1,7 @@
 import express from 'express'
 import setupMiddlewares from './middlewares'
 import setupRoutes from './routes'
-import { registerInfrastrucutureServices } from '../../infra/dependency-injection'
+import { registerInfrastrucutureServices } from '@/infra/dependency-injection'
 
 import { container } from 'tsyringe'
 

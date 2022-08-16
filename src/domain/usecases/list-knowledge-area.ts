@@ -1,4 +1,4 @@
-import { KnowledgeAreaModel } from '../models/knowledge-area'
+import { KnowledgeAreaModel } from '@/domain/models/knowledge-area'
 
 export interface ListKnowledgeAreaModel {
   id: string
