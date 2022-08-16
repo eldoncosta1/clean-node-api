@@ -7,14 +7,15 @@
     "strictNullChecks": true,
     "experimentalDecorators": true,
     "sourceMap": true,
-    "rootDir": "src"
+    "rootDir": "src",
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"]
+    }
   },
   "include": [
     "src",
     "__tests__"
   ],
-  "exclude": [
-    "**/*.spec.ts",
-    "**/*.test.ts",
-  ]
+  "exclude": []
 }
